@@ -21,10 +21,22 @@ img {
     width: 50%;
 }
 
+marquee {
+    font-size: 30px;
+    text-align: center;
+    background-color: #A16E00;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffffff;
+    font-family: "Helvetica", sans-serif;
+}
+
 h2 {
     font-size: 50px;
+    font-weight: normal;
     text-align: center;
-    font-family: "Courier New", monospace;
+    font-style: italic;
+    font-family: "Copperplate", Fantasy;
     color: #FFC04B;
 }
 
