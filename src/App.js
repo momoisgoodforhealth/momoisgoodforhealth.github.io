@@ -92,16 +92,34 @@ const App = () => {
         'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.',
         'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients'
     ]
-
+    
     const [good, setGood] = useState(0)
     const [neutral, setNeutral] = useState(0)
     const [bad, setBad] = useState(0)
     const [anecdote, setAnec] = useState('get bitches')
+    const [vote, setVote] = useState(0)
+    const [arrayn, setArrayn] = useState(0)
+    const [array, setArray] = useState([0, 0, 0, 0, 0, 0, 0])
+    setArray[0] = 5
+    console.log(array)
+   //  var ane = 0
+    const points = [0, 0, 0, 0, 0, 0, 0]
+    const copy = [...points]
 
     const bitches = () => {
         const rnd = Math.floor(Math.random() * 7)
-        console.log(rnd)
+        console.log('rnd='+rnd)
         setAnec(anecdotes[rnd])
+        setArrayn(rnd)
+        //anec = rnd
+        console.log('anec='+arrayn)
+    }
+
+    const vot = () => {
+        console.log('anec=' + arrayn)
+        copy[arrayn] += 1
+        setVote(copy[arrayn])
+        console.log(copy)
     }
 
 
@@ -127,6 +145,9 @@ const App = () => {
                 Next Anecdote
             </button>
             <p>{anecdote}</p>
+            <button onClick={vot}>
+                Number of Votes : {vote}
+            </button>
         </div>
     )
 }
