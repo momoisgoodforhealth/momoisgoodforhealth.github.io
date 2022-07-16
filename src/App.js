@@ -4,9 +4,9 @@ const Course = (props) => {
 
     const cor = props.courses
     const parts = cor.parts
-  //  var totalExercises = parts.reduce(function (sum, part) {
-  //      return sum + part.exercises
-  //  },0)
+ //   var totalExercises = parts.reduce(function (sum, part) {
+   //     return sum + part.exercises
+   // },0)
 
     
 
@@ -18,19 +18,30 @@ const Course = (props) => {
                 <div>
                     <ul>
                         <li>{course.name}</li>
-                        <li>{course.parts[0].name} {course.parts[0].exercises}</li>
-                        <li></li>
+                        <li>{course.parts.map(part =>
+                            <p>{part.name} {part.exercises}</p>
+                            )}</li>
                     </ul>
                 </div>)
+         
+                   )
           
-    /*        parts.map(part =>
+    /*      
+     *         cor.map(part =>
+                       <div>
+                           <ul>
+                               <li>{part.name} {part.exercises}</li>
+                               <li></li>
+                           </ul>
+                       </div>
+                       parts.map(part =>
                 <div>
                     <ul>
                         <li>{part.name}</li>
                         </ul> 
                     </div>)  */
         
-        )
+       
     }
       /*  return (parts.map(part =>
             <div>
@@ -45,6 +56,7 @@ const Course = (props) => {
         <div>
             <Heading />
             <Content />
+     
         </div>
     )
 
