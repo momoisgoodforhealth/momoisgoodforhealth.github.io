@@ -22,6 +22,9 @@ const Course = (props) => {
                             <p>{part.name} {part.exercises}</p>
                             )}</li>
                     </ul>
+                    <p>Sum = {course.parts.reduce(function (sum, part) {
+                        return sum + part.exercises
+                    }, 0)}</p>
                 </div>)
          
                    )
