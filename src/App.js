@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './styling.css'
 
 const Course = (props) => {
 
@@ -114,7 +115,7 @@ const App = () => {
     ]
 
     return (
-        <div><h1>joe mama</h1></div>)
+        <div class="container"><h1>joe mama</h1></div>)
 }
 
 export default App
