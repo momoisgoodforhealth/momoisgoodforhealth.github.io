@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './styling.css'
+import image from './images/momocha2.jpg';
 
 const Course = (props) => {
 
@@ -115,7 +116,13 @@ const App = () => {
     ]
 
     return (
-        <div class="container"><h1>joe mama</h1></div>)
+        <div class="container">
+            <h2>Momocha Keychains Now Available</h2>
+            <img src={image} alt="Image" />
+            <marquee>Shipping all over the US</marquee>
+        </div>
+        
+        )
 }
 
 export default App
