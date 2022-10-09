@@ -43,13 +43,15 @@ h2 {
     font-family: "Copperplate", Fantasy;
     color: #FFC04B;
 }
-
 img {
     display: block;
+    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    height: auto;
+    align-content: center;
 }
+
 
 marquee {
     font-size: 30px;
@@ -59,7 +61,6 @@ marquee {
     font-style: italic;
     color: #ffffff;
     font-family: "Helvetica", sans-serif;
-    width: 20%;
     display: block;
     margin-left: auto;
     margin-right: auto;
