@@ -117,9 +117,7 @@ const App = () => {
 
     return (
         <div class="container">
-            <h2>Momocha Keychains Now Available</h2>
-            <img src={image} alt="Image" />
-            <marquee>Shipping all over the US</marquee>
+            <h2>Under Construction</h2>
         </div>
         
         )
