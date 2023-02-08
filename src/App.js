@@ -117,7 +117,18 @@ const App = () => {
 
     return (
         <div class="container">
-            <h2>Under Construction</h2>
+            <h2>Hi, this is Shovan.</h2>
+            <p>shovanshakya@usf.edu | 8138096496</p>
+            <h1>You can find my some of my projects below:</h1>
+            <a href="https://github.com/momoisgoodforhealth">My Github</a>
+            <br />
+            <a href="https://github.com/momoisgoodforhealth/BullsSnapchatAR">Bulls AR Snapchat (Hackabulls 2022)</a>
+            <br />
+            <a href="https://github.com/momoisgoodforhealth/Khel-Android-App">Khel Android App</a>
+            <br />
+            <a href="https://momoisgoodforhealth.itch.io/five-nights-at-the-student-center">5 Nights at the Student Center Game</a>
+            <h3>This site is under development.</h3>
+
         </div>
         
         )
