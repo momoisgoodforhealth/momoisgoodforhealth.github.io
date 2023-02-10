@@ -127,6 +127,11 @@ const App = () => {
             <a href="https://github.com/momoisgoodforhealth/Khel-Android-App">Khel Android App</a>
             <br />
             <a href="https://momoisgoodforhealth.itch.io/five-nights-at-the-student-center">5 Nights at the Student Center Game</a>
+            <br />
+            <br />
+            <br />
+            <a href="Shovan_Resume.pdf" download><h1>Download my Resume!</h1></a>
+            <br />
             <h3>This site is under development.</h3>
 
         </div>
