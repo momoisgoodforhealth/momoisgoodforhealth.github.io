@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.e5dec54a.css",
-    "main.js": "/static/js/main.14af7ffa.js",
+    "main.js": "/static/js/main.e6d64721.js",
     "static/media/momocha2.jpg": "/static/media/momocha2.65e102efd7d5974300cb.jpg",
     "index.html": "/index.html",
     "main.e5dec54a.css.map": "/static/css/main.e5dec54a.css.map",
-    "main.14af7ffa.js.map": "/static/js/main.14af7ffa.js.map"
+    "main.e6d64721.js.map": "/static/js/main.e6d64721.js.map"
   },
   "entrypoints": [
     "static/css/main.e5dec54a.css",
-    "static/js/main.14af7ffa.js"
+    "static/js/main.e6d64721.js"
   ]
 }
