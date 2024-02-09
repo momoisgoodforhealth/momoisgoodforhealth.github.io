@@ -54,7 +54,7 @@ h2 {
 }
 
 h3 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: normal;
     text-align: left;
     font-family: "Monaco", monospace;
@@ -63,7 +63,7 @@ h3 {
     h3::after {
         content: "";
         width: 8px;
-        height: 40px;
+        height: 30px;
         background: #FFBD00;
         display: inline-block;
         animation: cursor-blink 1.5s steps(2) infinite;
