@@ -22,18 +22,11 @@ const App = () => {
 }}/>
             <h1>You can find my some of my work below:</h1>
             <br />
-            <a>RISC-V Microprocessor - FPGA Implementation (in progress)</a>
-            <img src={'./mips.png'} />
-            <br />
-            <a>Simple 5V to 3.3V LDO Regulator</a>
-            <img src={'./ldo3d.png'} />
-            <img src={'./ldo2d.png'} />
-            <img src={'./ldoschem.png'} />
-            <br />
-            <a>STM32 Based PCB Design for Custom EEG (in progress)</a>
+            <a>STM32 Based PCB Design for Custom fNIRS Headset (in progress)</a>
             <img src={'./schem.png'} />
             <img src={'./3s.png'} />
             <br />
+
             <a href="https://www.mbari.org/">Monterey Bay Aquarium Research Institute</a>
             <br />
             <a href="https://github.com/momoisgoodforhealth/Stereovision"> -- Fisheye Stereo Disparity, (Auto) Distance Estimation</a>
@@ -42,6 +35,21 @@ const App = () => {
             <ReactPlayer url='https://youtu.be/-WozIKdKqKQ' />
             <ReactPlayer url='https://youtu.be/YaTxnYlS3kk' />
             <br />
+
+            <a>16 Bit RISC-V Microprocessor - FPGA Implementation</a>
+            <img src={'./mips.png'} />
+            <br />
+            <a>Simple 5V to 3.3V LDO Regulator</a>
+            <img src={'./ldo3d.png'} />
+            <img src={'./ldo2d.png'} />
+            <img src={'./ldoschem.png'} />
+            <br />
+
+            <a href="https://github.com/momoisgoodforhealth/ML/blob/main/EEL4774_finalreport.pdf" >Image Classification Methods on Custom Data</a>
+            <img src = {'./ML.png'} />
+            <img src = {'./MLarch.png'} />
+            <br />
+
             <a href="http://reedlab.eng.usf.edu/">Rehabilitation Engineering and Electromechanical Design Lab(REED)</a>
             <br />
             <a href="https://github.com/momoisgoodforhealth/IAE-Driving-Sim"> -- CAREN Driving Simulator with Motion Base</a>
