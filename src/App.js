@@ -22,9 +22,11 @@ const App = () => {
 }}/>
             <h1>You can find my some of my work below:</h1>
             <br />
-            <a>STM32 Based PCB Design for Custom fNIRS Headset (in progress)</a>
-            <img src={'./schem.png'} />
-            <img src={'./3s.png'} />
+            <a>STM32 PCB Design with Bluetooth U.FL</a>
+            <img src={'./stm32bluehw.png'} />
+            <img src={'./stm32blueschem.png'} />
+            <img src={'./stm32blueboard.png'} />
+            
             <br />
 
             <a href="https://www.mbari.org/">Monterey Bay Aquarium Research Institute</a>
