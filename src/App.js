@@ -7,11 +7,11 @@ const App = () => {
     return (
         <div class="container">
             <h2>Hi, this is Shovan.</h2>
-            <h3>An EECS wannabe. </h3>
+            <h3>An ECE wannabe. </h3>
             <p>shovanshakya@usf.edu | 8138096496</p>
             <a href="https://github.com/momoisgoodforhealth">My Github</a>
             <br />
-            <a href="Shovan_Resume.pdf" download>Download my Resume!</a>
+            <a href="resume.pdf" download>Download my Resume!</a>
             <br />
             
             <hr  style={{
@@ -22,12 +22,24 @@ const App = () => {
 }}/>
             <h1>You can find my some of my work below:</h1>
             <br />
-            <a>STM32 PCB Design with Bluetooth U.FL</a>
-            <img src={'./stm32bluehw.png'} />
-            <img src={'./stm32blueschem.png'} />
-            <img src={'./stm32blueboard.png'} />
+            <a href="https://bci-fnirs.github.io/">Functional Near Infrared Spectroscopy Headset - Capstone Link</a>
+            <img src={'./IMG_3250.jpg'} />
+            <br />
+            <br />
+            
+            <a href="https://github.com/momoisgoodforhealth/Zynq-BRAM-PL-PS">Zynq BRAM share PS PL</a>
+            <p>SystemVerilog, C</p>
+            <img src={'./bram.png'} />
+            <br />
+
+            <a>STM32 IMU Sensor Platform with CAN and Ethernet</a>
+            <img src={'./moduleschem.png'} />
+            <img src={'./modulepcb.png'} />
+            <img src={'./module3d1.png'} />
+            <img src={'./module3d2.png'} />
             
             <br />
+
 
             <a href="https://www.mbari.org/">Monterey Bay Aquarium Research Institute</a>
             <br />
@@ -40,11 +52,6 @@ const App = () => {
 
             <a>16 Bit RISC-V Microprocessor - FPGA Implementation</a>
             <img src={'./mips.png'} />
-            <br />
-            <a>Simple 5V to 3.3V LDO Regulator</a>
-            <img src={'./ldo3d.png'} />
-            <img src={'./ldo2d.png'} />
-            <img src={'./ldoschem.png'} />
             <br />
 
             <a href="https://github.com/momoisgoodforhealth/ML/blob/main/EEL4774_finalreport.pdf" >Image Classification Methods on Custom Data</a>
