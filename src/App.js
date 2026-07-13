@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "./App.css";
 
@@ -21,15 +21,14 @@ const PROJECTS = [
     title: "Current Job: REEKON Tools",
     subtitle: "Embedded Software Engineer",
     videos: [{ url: "./t1r.mp4", playing: true, loop: true, muted: true }],
-  },
-  {
-    id: "fft",
-    title: "nRF5340 Zephyr RTOS FFT Visualizer",
-    subtitle: "BLE data transfer + CMSIS DSP FFT + visualization",
-    images: [
-      { src: "./fft.jpeg", alt: "FFT visualizer screenshot" },
-      { src: "./ble.png", alt: "BLE diagram" },
-    ],
+    expandable: {
+      label: "",
+      images: [
+        { src: "./IMG_4450.jpg", alt: "REEKON Tools project photo" },
+        { src: "./IMG_4455.jpg", alt: "REEKON Tools project photo" },
+      ],
+      videos: [{ url: "./IMG_4357.mp4", playing: true, loop: true, muted: true, controls: true }],
+    },
   },
   {
     id: "zynq",
@@ -103,6 +102,15 @@ const PROJECTS = [
     videos: [{ url: "https://youtu.be/BI3HAqEKuM8" }],
   },
   {
+    id: "fft",
+    title: "nRF5340 Zephyr RTOS FFT Visualizer",
+    subtitle: "BLE data transfer + CMSIS DSP FFT + visualization",
+    images: [
+      { src: "./fft.jpeg", alt: "FFT visualizer screenshot" },
+      { src: "./ble.png", alt: "BLE diagram" },
+    ],
+  },
+  {
     id: "khel",
     title: "Khel Android App (2020)",
     subtitle: "In my final year of highschool, I had this idea that playing sports and interacting with people is one of the best ways to make friends. So I made an app that allows users to book futsal venues, form teams and challenge each other.",
@@ -110,6 +118,23 @@ const PROJECTS = [
     videos: [{ url: "https://youtube.com/shorts/_jeOAJ3J_G8?feature=share" }],
   },
 ];
+
+const PROJECT_ORDER = [
+  "reekon",
+  "zynq",
+  "fnirs",
+  "stm32",
+  "mbari",
+  "reed",
+  "riscv",
+  "ml",
+  "fft",
+  "khel",
+];
+
+const DISPLAY_PROJECTS = PROJECT_ORDER
+  .map((projectId) => PROJECTS.find((project) => project.id === projectId))
+  .filter(Boolean);
 
 function ExternalLink({ href, children }) {
   return (
@@ -171,6 +196,14 @@ function VideoBlock({ videos }) {
 export default function App() {
   const lastUpdated = "1999-09-07"; // change to whatever you want for the joke
   const visitorCount = "00018427";  // fake counter
+  const [expandedProjects, setExpandedProjects] = useState({});
+
+  const toggleProject = (projectId) => {
+    setExpandedProjects((current) => ({
+      ...current,
+      [projectId]: !current[projectId],
+    }));
+  };
 
   return (
     <div className="page">
@@ -212,16 +245,16 @@ export default function App() {
           <p className="small muted" style={{ marginTop: 0 }}>
             Jump to:
             {" "}
-            {PROJECTS.map((p, i) => (
+            {DISPLAY_PROJECTS.map((p, i) => (
               <span key={p.id}>
                 <a href={`#${p.id}`}>{p.title}</a>
-                {i < PROJECTS.length - 1 ? " | " : ""}
+                {i < DISPLAY_PROJECTS.length - 1 ? " | " : ""}
               </span>
             ))}
           </p>
         </div>
 
-        {PROJECTS.map((p) => (
+        {DISPLAY_PROJECTS.map((p) => (
           <div key={p.id} id={p.id} className="project">
             <div className="projectTitle">{p.title}</div>
             {p.subtitle ? <div className="projectSub">{p.subtitle}</div> : null}
@@ -238,6 +271,25 @@ export default function App() {
 
             <MediaGrid images={p.images} />
             <VideoBlock videos={p.videos} />
+
+            {p.expandable ? (
+              <>
+                <button
+                  type="button"
+                  className="small expandButton"
+                  onClick={() => toggleProject(p.id)}
+                  aria-expanded={Boolean(expandedProjects[p.id])}
+                >
+                  {expandedProjects[p.id] ? "Hide" : p.expandable.label}
+                </button>
+                {expandedProjects[p.id] ? (
+                  <>
+                    <MediaGrid images={p.expandable.images} />
+                    <VideoBlock videos={p.expandable.videos} />
+                  </>
+                ) : null}
+              </>
+            ) : null}
 
             <div className="small" style={{ marginTop: 8 }}>
               <a href="#projects">Back to top</a>

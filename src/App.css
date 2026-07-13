@@ -112,6 +112,11 @@ a:active { color: #ff0000; }
   margin: 0 0 8px;
 }
 
+.expandButton {
+  margin-top: 8px;
+  cursor: pointer;
+}
+
 .mediaGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
