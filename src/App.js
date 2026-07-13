@@ -20,7 +20,10 @@ const PROJECTS = [
     id: "reekon",
     title: "Current Job: REEKON Tools",
     subtitle: "Embedded Software Engineer",
-    videos: [{ url: "./t1r.mp4", playing: true, loop: true, muted: true }],
+    videos: [
+      { url: "./t1r.mp4", playing: true, loop: true, muted: true },
+      { url: "./goertzel.mp4", playing: true, loop: true, muted: true },
+    ],
     expandable: {
       label: "",
       images: [
@@ -163,33 +166,24 @@ function MediaGrid({ images }) {
 
 function VideoBlock({ videos }) {
   if (!videos?.length) return null;
-  const mainVideo = videos[0];
   return (
-    <div className="videoWrap">
-      <div className="videoInner">
-        <ReactPlayer
-          url={mainVideo.url}
-          width="100%"
-          height="100%"
-          controls={mainVideo.controls ?? true}
-          playing={mainVideo.playing}
-          loop={mainVideo.loop}
-          muted={mainVideo.muted}
-        />
-      </div>
-      {videos.length > 1 ? (
-        <div className="small muted" style={{ marginTop: 8 }}>
-          More videos:
-          <ul className="ulCompact">
-            {videos.slice(1).map((v) => (
-              <li key={v.url}>
-                <ExternalLink href={v.url}>{v.url}</ExternalLink>
-              </li>
-            ))}
-          </ul>
+    <>
+      {videos.map((video) => (
+        <div key={video.url} className="videoWrap">
+          <div className="videoInner">
+            <ReactPlayer
+              url={video.url}
+              width="100%"
+              height="100%"
+              controls={video.controls ?? true}
+              playing={video.playing}
+              loop={video.loop}
+              muted={video.muted}
+            />
+          </div>
         </div>
-      ) : null}
-    </div>
+      ))}
+    </>
   );
 }
 
